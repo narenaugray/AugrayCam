@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+:root {
+    --aCamThemeColor: #f38338;
+    --aCamBgColor: #fff;
+    --aCamTextColor: #000;
+}
+.augrayCam {
+    background: var(--aCamBgColor);
+    color: var(--aCamTextColor3);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    word-break: break-word;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1060;
+}
+.augrayCam * {
+    box-sizing: border-box;
+}
+.fullPage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.alignCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hide {
+    display: none !important;
+}
+div#augrayCamLoader {
+    font-size: 25px;
+    color: var(--aCamThemeColor);
+    font-weight: 500;
+    letter-spacing: 1px;
+    z-index: 11;
+}
+div#augrayCamLoader p {
+    font-size: 0;
+    background: url(./augrayCam.png) center center no-repeat;
+    background-size: contain;
+    width: 220px;
+    height: 64px;
+    margin: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+i.acProgress {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    border: 5px solid;
+    border-radius: 50%;
+    border-color: #eee;
+    position: relative;
+}
+i.acProgress:before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 5px solid;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    border-right-color: transparent;
+    animation: acProgress 0.5s linear infinite;
+}
+@keyframes acProgress {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
